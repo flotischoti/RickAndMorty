@@ -1,27 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <SearchPage @select="selectedId = $event" v-show="selectedId < 0"/>
+  <Character :id="selectedId" v-if="selectedId > 0" @back="selectedId = -1"/>
+ 
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import SearchPage from './components/SearchPage.vue';
+import Character from './components/Character.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    SearchPage,
+    Character,
   },
+  data() {
+    return {
+      selectedId: Number,
+    }
+  }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  selectedId = -1;
+}
 </script>
 
 <style lang="scss">
+
+* {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

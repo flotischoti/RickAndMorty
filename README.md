@@ -1,29 +1,19 @@
 # rickandmorty
 
-## Project setup
+A small web app to search for Rick and Morty Characters built with TS, Vue-JS and GraphQL.
+
+### Install
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Known bug
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Search box disappears when clicked too often or STRG+A is pressed while focused. Reload page to start over.
