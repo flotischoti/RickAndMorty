@@ -1,6 +1,6 @@
 # rickandmorty
 
-A small web app to search for Rick and Morty Characters built with TS, Vue-JS and GraphQL.
+A small web app to search for Rick and Morty Characters built with TS, Vue-JS and GraphQL within a couple of hours for a job interview.
 
 ### Install
 
